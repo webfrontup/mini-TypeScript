@@ -1,0 +1,15 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "quotemark": [false], //单引号
+        "semicolon": [false], //分号
+        "no-console": [false], //不需要console
+        "interface-name": [true, "never-prefix"],
+        "object-literal-sort-keys": [false], //所传参数必须对应
+    },
+    "rulesDirectory": []
+}
