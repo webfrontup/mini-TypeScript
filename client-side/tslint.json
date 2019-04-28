@@ -1,4 +1,5 @@
 {
+    //配置文件一定要注意格式及查看编辑器（ts-lint）报错信息
     "defaultSeverity": "error",
     "extends": [
         "tslint:recommended"
@@ -9,7 +10,15 @@
         "semicolon": [false], //分号
         "no-console": [false], //不需要console
         "interface-name": [true, "never-prefix"], 
-        "object-literal-sort-keys": [false], //所传参数必须对应
+        "variable-name": [false],
+        "no-empty-interface": [false],
+        //每个文件允许最多有15个类
+        "max-classes-per-file": [
+            true,
+            50,
+            "exclude-class-expressions"
+        ],
+        "object-literal-sort-keys": [false] //所传参数必须对应
     },
     "rulesDirectory": []
 }
