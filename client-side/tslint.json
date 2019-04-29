@@ -11,6 +11,7 @@
         "no-console": [false], //不需要console
         "interface-name": [true, "never-prefix"], 
         "variable-name": [false],
+        "no-empty": [false],
         "no-empty-interface": [false],
         //每个文件允许最多有15个类
         "max-classes-per-file": [
