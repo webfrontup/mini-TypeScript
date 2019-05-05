@@ -18,6 +18,7 @@
         "ban-types": [false],
         "no-namespace": [false],
         "no-reference": [false],
+        "class-name": [false],
         //每个文件允许最多有15个类
         "max-classes-per-file": [
             true,

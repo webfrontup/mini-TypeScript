@@ -13,4 +13,5 @@
 // import './example/advanced-type-2' // ts高级类型
 // import './ts-modules/index' // 命名空间
 // import './example/merging' // 声明合并
-import './example/decorators' // 装饰器
+// import './example/decorators' // 装饰器
+import './example/mixin' // mixin 混入
