@@ -15,4 +15,5 @@
 // import './example/merging' // 声明合并
 // import './example/decorators' // 装饰器
 // import './example/mixin' // mixin 混入
-import './example/update' // 其他ts更新
+// import './example/update' // 其他ts更新
+import './example/declaration-files' // 声明文件的应用 全局库的引用

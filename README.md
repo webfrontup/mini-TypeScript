@@ -13,3 +13,8 @@
 | Type Alias类型别名  |  | ✔️ |  |
 | Function  |  |  | ✔️ |
 | Variable  |  |  | ✔️ |
+
+### 声明文件
+- https://www.tslang.cn/docs/handbook/declaration-files/templates.html ts模板
+- 识别已有js库的类型
+- UMD模块 既能做全局库，又能做模块使用
