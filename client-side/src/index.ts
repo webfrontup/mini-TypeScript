@@ -14,4 +14,5 @@
 // import './ts-modules/index' // 命名空间
 // import './example/merging' // 声明合并
 // import './example/decorators' // 装饰器
-import './example/mixin' // mixin 混入
+// import './example/mixin' // mixin 混入
+import './example/update' // 其他ts更新
