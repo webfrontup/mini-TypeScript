@@ -25,3 +25,9 @@
 
 - 如果引入的库没有类型系统，那么需要 npm i @types/库名，再没有的话就需要自己写了
 - 如` npm i @types/arr-diff -D `
+
+
+- tsconfig.json 配置详解
+
+
+
