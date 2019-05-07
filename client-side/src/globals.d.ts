@@ -4,4 +4,6 @@ declare function getTitle(): string
 
 declare let documentTitle: string
 
-
+interface String{
+    getFirstLetter(): string
+}

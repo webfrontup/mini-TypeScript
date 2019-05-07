@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/webfrontup/mini-TypeScript#readme",
   "devDependencies": {
+    "@types/arr-diff": "^4.0.0",
     "clean-webpack-plugin": "^2.0.1",
     "copy-webpack-plugin": "^5.0.3",
     "cross-env": "^5.2.0",
