@@ -29,5 +29,10 @@
 
 - tsconfig.json 配置详解
 
+### server-side的生成
+- sudo npm i express-generator -g
+- express --view=jade server-side
 
-
+### mac mysql配置
+- mysql下载地址 https://dev.mysql.com/downloads/mysql/
+- workbench使用 https://www.jianshu.com/p/dc58a4efdd84
