@@ -12,7 +12,8 @@ module.exports = sql => {
                 )
                 `
             )
-            console.log(123456)
+            // Access denied for user ''@'172.18.0.1' (using password: YES)
+            console.log(res,err)
         }
     )
 }

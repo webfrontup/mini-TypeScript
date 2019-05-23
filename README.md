@@ -35,4 +35,7 @@
 
 ### mac mysql配置
 - mysql下载地址 https://dev.mysql.com/downloads/mysql/
+- mysql环境配置 https://blog.csdn.net/z040145/article/details/50435148
+- https://blog.csdn.net/Cwsy_C/article/details/78671419
+- 启动mysql mysql -u root -p123456root
 - workbench使用 https://www.jianshu.com/p/dc58a4efdd84
