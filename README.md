@@ -48,3 +48,8 @@
 ### 发布流程
 - `npm run build` 
 - `npm run start`
+
+### 报错修改
+- Fatal error in , line 0 Check failed: U_SUCCESS(status). ===> `https://www.imooc.com/wenda/detail/545834`
+
+
