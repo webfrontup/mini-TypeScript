@@ -1,0 +1,35 @@
+extends layout
+
+
+block content
+    input(type="file", name="", id="file")
+
+
+    script.
+        function UploadFile() {
+            var fileObj = document.getElementById('file')
+            var url = "http://localhost:3000/api/file_upload"
+
+            var form = new FormData()
+            form.append('file', fileObj)
+
+            xhr = new XMLHttpRequest()
+            xhr.open('post', url, true)
+            xhr.onload = uploadComplete
+            xhr.onerror = uploadFailed
+            xhr.upload.onloadstart = function () {
+                ot = new Date().getTime()
+                onload = 0
+            }
+        }
+        function uploadComplete (event) {
+            if(event.target.responseText === 'success') {
+                console.log('success')
+            }else{
+                console.log('failed')
+            }
+        }
+        function uploadFailed () {
+            console.log('faild')
+        }
+        document.getElementById('file').addEventListener('changer', uploadFailed)

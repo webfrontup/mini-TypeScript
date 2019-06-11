@@ -2,7 +2,8 @@ module.exports = sql => {
     sql.query(
         'SELECT table_name FROM information_schema.TABLES WHERE table_name = "image"',
         (err, res) => {
-            // if(res.length)return
+            console.log(res,'rersssss')
+            if(res.length)return
             sql.query(
                 `CREATE TABLE \`image\` (
                     \`id\` INT NOT NULL AUTO_INCREMENT,
@@ -12,7 +13,6 @@ module.exports = sql => {
                 )
                 `
             )
-            // Access denied for user ''@'172.18.0.1' (using password: YES)
             console.log(res,err)
         }
     )

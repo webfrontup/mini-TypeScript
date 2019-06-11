@@ -1,10 +1,11 @@
+import mysql = require('mysql');
+
 const devConfig = {
-    host: 'localhost',
-    database: 'agency_dev',
-    name: 'root',
+    host: '127.0.0.1',
+    user: 'root',
     password: 'root',
+    database: 'agency_dev',
     port: 33061,
-    charset: 'utf8',
 }
 
 const prodConfig = {
@@ -13,4 +14,6 @@ const prodConfig = {
     port: 33061,
 }
 
-module.exports = process.env.NODE_ENV === 'production' ? prodConfig : devConfig
+const sql = mysql.createConnection(devConfig)
+
+module.exports = process.env.NODE_ENV === 'production' ? sql : sql

@@ -1,13 +1,8 @@
-import mysql = require('mysql');
-const mysqlConfig = require("../config/mysql.config");
-
-const sql = mysql.createConnection(mysqlConfig);
+const sql = require('../config/mysql.config')
 
 sql.connect()
 
 require('./tables/image')(sql)
-
-
 
 export = sql
 
