@@ -39,3 +39,12 @@
 - https://blog.csdn.net/Cwsy_C/article/details/78671419
 - 启动mysql mysql -u root -p123456root
 - workbench使用 https://www.jianshu.com/p/dc58a4efdd84
+
+
+### 前台地址
+- 上传文件列表 `http://localhost:3000/api/list`
+- 上传文件地址 `http://localhost:3000/upload`
+
+### 发布流程
+- `npm run build` 
+- `npm run start`

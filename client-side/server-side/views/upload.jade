@@ -7,7 +7,7 @@ block content
 
     script.
         function UploadFile() {
-            var fileObj = document.getElementById('file')
+            var fileObj = document.getElementById('file').files[0]
             var url = "http://localhost:3000/api/file_upload"
 
             var form = new FormData()
@@ -21,8 +21,10 @@ block content
                 ot = new Date().getTime()
                 onload = 0
             }
+            xhr.send(form)
         }
         function uploadComplete (event) {
+            console.log(event,event.target.responseText,'aabb')
             if(event.target.responseText === 'success') {
                 console.log('success')
             }else{
@@ -30,6 +32,6 @@ block content
             }
         }
         function uploadFailed () {
-            console.log('faild')
+            console.log('faild',"aaaa")
         }
-        document.getElementById('file').addEventListener('changer', uploadFailed)
+        document.getElementById('file').addEventListener('change', UploadFile)
