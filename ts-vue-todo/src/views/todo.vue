@@ -10,6 +10,7 @@
 				@on-save="handSave"
 				@on-edit="handEdit"
 				@on-cancel="handCancel"
+				@on-complete="handComplete"
 			/>
 			
 		</ul>
@@ -47,6 +48,9 @@ export default class TodoPage extends Vue {
 	}
 	public handCancel() {
 		this.edittingIndex = -1;
+	}
+	public handComplete(index) {
+		this.list[index].complete = true;
 	}
 }
 </script>
