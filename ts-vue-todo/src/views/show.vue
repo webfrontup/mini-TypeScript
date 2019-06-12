@@ -1,5 +1,22 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <p 
+    v-for="(item,index) in list" 
+    :key="index"
+    :style="{textDecoration: item.complete? 'line-through':''}"
+    >{{item.text}}</p>
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import { State, Mutation } from 'vuex-class';
+@Component({
+  name: 'Show',
+})
+export default class Show extends Vue {
+  @State('todoList') public list;
+
+}
+</script>
+

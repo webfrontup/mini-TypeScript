@@ -14,12 +14,14 @@
 			/>
 			
 		</ul>
+		<a-button @click="turn">跳转</a-button>
 	</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import TodoItem from '../components/todo-item'; // @ is an alias to /src
+import { State, Mutation } from 'vuex-class';
 
 @Component({
 	name: 'TodoPage',
@@ -29,18 +31,14 @@ import TodoItem from '../components/todo-item'; // @ is an alias to /src
 })
 export default class TodoPage extends Vue {
 	public edittingIndex = -1;
-	public list = [
-		{
-			text: 'ts全面全民解读',
-			complete: false,
-		},
-		{
-			text: '学习全栈okok',
-			complete: false,
-		},
-	];
+	@State('todoList') public list;
+
+	@Mutation('updateTodoList') public updateList;
+	@Mutation('todoItemComplete') public handComplete;
+
 	public handSave({index, content}) {
-		this.list[index].text = content;
+		// this.list[index].text = content;
+		this.updateList({index, content});
 		this.handCancel();
 	}
 	public handEdit(index) {
@@ -49,8 +47,13 @@ export default class TodoPage extends Vue {
 	public handCancel() {
 		this.edittingIndex = -1;
 	}
-	public handComplete(index) {
-		this.list[index].complete = true;
+	// public handComplete(index) {
+	// 	this.list[index].complete = true;
+	// }
+	public turn() {
+		this.$router.push({
+			name: 'show',
+		});
 	}
 }
 </script>
