@@ -52,4 +52,8 @@
 ### 报错修改
 - Fatal error in , line 0 Check failed: U_SUCCESS(status). ===> `https://www.imooc.com/wenda/detail/545834`
 
-
+### 发布ts组件代码
+- 需要在package.json文件中添加`'typings':'./types/ts-vue-todo-item.d.ts','main':'./dist/......' `
+- 需要添加`.npmignore` 发布到npm需要忽略的文件
+- dist 中存放着打包代码 main中是指引用的入口文件 typings指打包的声明文件
+- 发布的时候注意发布的版本号

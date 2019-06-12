@@ -40,6 +40,7 @@ export default class TodoPage extends Vue {
 		// this.list[index].text = content;
 		this.updateList({index, content});
 		this.handCancel();
+		this.$message.success('success');
 	}
 	public handEdit(index) {
 		this.edittingIndex = index;
