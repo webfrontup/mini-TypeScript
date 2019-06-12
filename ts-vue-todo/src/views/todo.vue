@@ -7,6 +7,9 @@
 				:key="index"
 				:index="index"
 				:editting-index="edittingIndex"
+				@on-save="handSave"
+				@on-edit="handEdit"
+				@on-cancel="handCancel"
 			/>
 			
 		</ul>
@@ -35,5 +38,15 @@ export default class TodoPage extends Vue {
 			complete: false,
 		},
 	];
+	public handSave({index, content}) {
+		this.list[index].text = content;
+		this.handCancel();
+	}
+	public handEdit(index) {
+		this.edittingIndex = index;
+	}
+	public handCancel() {
+		this.edittingIndex = -1;
+	}
 }
 </script>
