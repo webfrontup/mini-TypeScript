@@ -1,0 +1,22 @@
+{
+  "name": "ts-axios-doc",
+  "version": "1.0.0",
+  "description": "doc for ts-axios",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "sh build.sh"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.44"
+  }
+}

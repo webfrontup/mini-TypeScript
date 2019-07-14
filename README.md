@@ -50,7 +50,7 @@
 - `npm run start`
 
 ### 报错修改
-- Fatal error in , line 0 Check failed: U_SUCCESS(status). ===> `https://www.imooc.com/wenda/detail/545834`
+- Fatal error in , line 0 Check failed: U_SUCCESS(status). ===> `https://www.imooc.com/wenda/detail/545834` (nvm use v10.15.3)
 
 ### 发布ts组件代码
 - 需要在package.json文件中添加`'typings':'./types/ts-vue-todo-item.d.ts','main':'./dist/......' `
