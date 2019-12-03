@@ -293,6 +293,7 @@ if (employee.fullName) {
 下面这个版本里，我们先检查用户密码是否正确，然后再允许其修改员工信息。我们把对 `fullName` 的直接访问改成了可以检查密码的 `set` 方法。 我们也加了一个 `get` 方法，让上面的例子仍然可以工作。
 
 ```typescript
+// 此段代码需要编译为es5时，用 tsc abc.ts --target es5
 let passcode = 'secret passcode'
 
 class Employee {
