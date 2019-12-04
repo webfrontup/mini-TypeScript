@@ -14,7 +14,7 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
 
     request.onreadystatechange = function handleLoad() {
       if (request.readyState !== 4) return
-      if (request.status === 0) return
+    //   if (request.status === 0) return
 
       const responseHeaders = parseHeaders(request.getAllResponseHeaders())
       const responseData =
