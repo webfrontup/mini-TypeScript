@@ -59,6 +59,8 @@ axios({
   params: {
     bar: 'baz'
   }
+}).then(res => {
+    console.log(res)
 })
 
 axios({
