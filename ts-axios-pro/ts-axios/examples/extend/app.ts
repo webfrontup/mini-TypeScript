@@ -46,7 +46,7 @@ interface ResponseData<T = any> {
 interface User {
   name: string
   age: number
-}
+} 
 
 function getUser<T>() {
   return axios<ResponseData<T>>('/extend/user')
