@@ -80,3 +80,10 @@ instances.get('/more/get', {
 }).then(res => {
     console.log(res)
 })
+
+const instance2 = axios.create({
+    baseURL: 'https://img.mukewang.com/'
+})
+instance2.get('5cc01a7b0001a33718720632.jpg')
+
+instance2.get('https://img.mukewang.com/szimg/5.jpg')
