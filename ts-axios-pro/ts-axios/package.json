@@ -48,31 +48,44 @@
   },
   "jest": {
     "transform": {
-      ".(ts|tsx)": "ts-jest"
+        ".(ts|tsx)": "ts-jest"
     },
-    "testEnvironment": "node",
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testEnvironment": "jsdom",
+    "testRegex": "/test/.*\\.(test|spec)\\.(ts)$",
     "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
+        "ts",
+        "tsx",
+        "js"
     ],
     "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/test/"
+        "/node_modules/",
+        "/test/"
     ],
     "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 95,
-        "lines": 95,
-        "statements": 95
-      }
+        "global": {
+            "branches": 90,
+            "functions": 95,
+            "lines": 95,
+            "statements": 95
+        }
     },
     "collectCoverageFrom": [
-      "src/*.{js,ts}"
+        "src/*.{js,ts}",
+        "src/**/*.{js,ts}"
+    ],
+    "setupFilesAfterEnv": [
+        "<rootDir>/test/boot.ts"
     ]
-  },
+},
+"prettier": {
+    "semi": true,
+    "singleQuote": true
+},
+"commitlint": {
+    "extends": [
+        "@commitlint/config-conventional"
+    ]
+},
   "prettier": {
     "semi": false,
     "singleQuote": true
@@ -85,7 +98,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-conventional": "^7.1.2",
-    "@types/jest": "^23.3.2",
+    "@types/jest": "^24.0.13",
     "@types/node": "^10.11.0",
     "@types/nprogress": "0.0.29",
     "body-parser": "^1.18.3",
@@ -99,8 +112,8 @@
     "cz-conventional-changelog": "^2.1.0",
     "express": "^4.16.4",
     "husky": "^1.0.1",
-    "jest": "^23.6.0",
-    "jest-config": "^23.6.0",
+    "jest": "^24.8.0",
+    "jest-config": "^24.8.0",
     "lint-staged": "^8.0.0",
     "lodash.camelcase": "^4.3.0",
     "nprogress": "^0.2.0",
@@ -118,7 +131,7 @@
     "shelljs": "^0.8.3",
     "style-loader": "^1.0.1",
     "travis-deploy-once": "^5.0.9",
-    "ts-jest": "^23.10.2",
+    "ts-jest": "^24.0.2",
     "ts-loader": "^5.3.3",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
@@ -126,7 +139,7 @@
     "tslint-config-standard": "^8.0.1",
     "tslint-loader": "^3.5.4",
     "typedoc": "^0.12.0",
-    "typescript": "^3.0.3",
+    "typescript": "^3.7.4",
     "webpack": "^4.31.0",
     "webpack-dev-middleware": "^3.6.2",
     "webpack-hot-middleware": "^2.24.4"
