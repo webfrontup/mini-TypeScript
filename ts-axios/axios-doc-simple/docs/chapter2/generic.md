@@ -241,4 +241,27 @@ let x = {a: 1, b: 2, c: 3, d: 4}
 getProperty(x, 'a') // okay
 getProperty(x, 'm') // error
 ```
+```typescript
+function create<T>(c: {new(): T}): T {
+    return new c()
+}
+
+class BeeKeeper {
+    nameTag: string
+}
+class Animal{
+    numLengs: numner
+}
+class Bee extends Animal {
+    keeper: BeeKeeper
+}
+class Lion extends Animal {
+    keeper: LionKeeper
+}
+function createInstance<T extends Animal>(c: new()=> T): T {
+    return new c()
+}
+createInstance(Lion).keeper.nameTag
+
+```
 
